@@ -27,6 +27,11 @@ export function Widget(asset, $modal) {
                     size: scope.widget.classes,
                 });
             };
+
+            scope.pinWidget = (widget) => {
+                angular.element('body').toggleClass('main-section--pinned-tabs');
+                widget.pinned = !widget.pinned;
+            }
         },
     };
 }

@@ -226,6 +226,9 @@ function AuthoringWidgetsDir(desks, commentsService, $injector) {
         templateUrl: 'scripts/apps/authoring/widgets/views/authoring-widgets.html',
         transclude: true,
         link: function(scope, elem) {
+            scope.widget = null;
+            scope.pinnedWidget = null;
+
             scope.userLookup = desks.userLookup;
 
             function reload() {
